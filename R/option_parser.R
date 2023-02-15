@@ -16,6 +16,20 @@ get_options <- function() {
       help = "",
       metavar = "character",
       type = "character"
+    ),
+    optparse::make_option(
+      c("-p", "--data_path"),
+      default = "reports/tables/tosh_population_time_series.csv",
+      help = "",
+      metavar = "character",
+      type = "character"
+    ),
+    optparse::make_option(
+      c("-p", "--output_path"),
+      default = "reports/figures/yearly_time_serie_individuals_all_scenario.jpg",
+      help = "",
+      metavar = "character",
+      type = "character"
     )
   )
   opt_parser <- optparse::OptionParser(option_list = listaOpciones)
