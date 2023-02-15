@@ -18,14 +18,14 @@ get_options <- function() {
       type = "character"
     ),
     optparse::make_option(
-      c("-p", "--data_path"),
+      c("-d", "--data_path"),
       default = "reports/tables/tosh_population_time_series.csv",
       help = "",
       metavar = "character",
       type = "character"
     ),
     optparse::make_option(
-      c("-p", "--output_path"),
+      c("-o", "--output_path"),
       default = "reports/figures/yearly_time_serie_individuals_all_scenario.jpg",
       help = "",
       metavar = "character",
