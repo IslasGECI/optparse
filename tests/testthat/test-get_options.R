@@ -1,6 +1,6 @@
 describe("get_options()", {
   it("returns a default month", {
-    obtained <- get_options()[["month"]]
+    obtained <- month@default
     expected <- "2022-7"
     expect_equal(obtained, expected)
   })
@@ -11,5 +11,10 @@ describe("get_options()", {
     output <- system(command, intern = TRUE)
     expected <- stringr::str_detect(output, expected_month)
     expect_true(expected)
+  })
+  it("returns a default year", {
+    obtained <- year@default
+    expected <- 2030
+    expect_equal(obtained, expected)
   })
 })
