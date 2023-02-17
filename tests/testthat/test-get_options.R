@@ -1,6 +1,6 @@
 describe("get_options()", {
   it("returns a default month", {
-    obtained <- month@default
+    obtained <- get_options()[["month"]]
     expected <- "2022-7"
     expect_equal(obtained, expected)
   })
@@ -13,8 +13,13 @@ describe("get_options()", {
     expect_true(expected)
   })
   it("returns a default year", {
-    obtained <- year@default
+    obtained <- get_options()[["year"]]
     expected <- 2030
+    expect_equal(obtained, expected)
+  })
+  it("returns a default scenarios", {
+    obtained <- get_options()[["scenarios"]]
+    expected <- "base,predation,management,fledglings,predation_and_management"
     expect_equal(obtained, expected)
   })
 })
