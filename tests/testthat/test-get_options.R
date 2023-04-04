@@ -22,4 +22,14 @@ describe("get_options()", {
     expected <- "base,predation,management,fledglings,predation_and_management"
     expect_equal(obtained, expected)
   })
+  it("returns a default species", {
+    obtained <- get_options()[["species"]]
+    expected <- "Hydrobates homochroa"
+    expect_equal(obtained, expected)
+  })
+  it("returns a default island", {
+    obtained <- get_options()[["island"]]
+    expected <- "Todos Santos"
+    expect_equal(obtained, expected)
+  })
 })

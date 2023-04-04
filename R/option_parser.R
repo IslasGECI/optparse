@@ -44,6 +44,20 @@ get_options <- function() {
       help = "",
       metavar = "character",
       type = "character"
+    ),
+    optparse::make_option(
+      c("-e", "--species"),
+      default = "Hydrobates homochroa",
+      help = "",
+      metavar = "character",
+      type = "character"
+    ),
+    optparse::make_option(
+      c("-i", "--island"),
+      default = "Todos Santos",
+      help = "",
+      metavar = "character",
+      type = "character"
     )
   )
   opt_parser <- optparse::OptionParser(option_list = listaOpciones)
