@@ -32,4 +32,14 @@ describe("get_options()", {
     expected <- "Todos Santos"
     expect_equal(obtained, expected)
   })
+  it("returns a default right_data", {
+    obtained <- get_options()[["right_data"]]
+    expected <- ""
+    expect_equal(obtained, expected)
+  })
+  it("returns a default left_data", {
+    obtained <- get_options()[["left_data"]]
+    expected <- ""
+    expect_equal(obtained, expected)
+  })
 })
