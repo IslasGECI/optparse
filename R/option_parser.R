@@ -58,6 +58,20 @@ get_options <- function() {
       help = "",
       metavar = "character",
       type = "character"
+    ),
+    optparse::make_option(
+      c("-r", "--right_data"),
+      default = "",
+      help = "Path to right joined data",
+      metavar = "character",
+      type = "character"
+    ),
+    optparse::make_option(
+      c("-l", "--left_data"),
+      default = "",
+      help = "Path to left joined data",
+      metavar = "character",
+      type = "character"
     )
   )
   opt_parser <- optparse::OptionParser(option_list = listaOpciones)
