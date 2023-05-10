@@ -42,4 +42,16 @@ describe("get_options()", {
     expected <- ""
     expect_equal(obtained, expected)
   })
+  it("returns a default initial_date", {
+    obtained <- get_options()[["initial_date"]]
+    expect_true(is.character(obtained))
+    expected <- "2022-1"
+    expect_equal(obtained, expected)
+  })
+  it("returns a default final-date", {
+    obtained <- get_options()[["final_date"]]
+    expect_true(is.character(obtained))
+    expected <- "2023-5"
+    expect_equal(obtained, expected)
+  })
 })
