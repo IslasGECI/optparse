@@ -72,6 +72,20 @@ get_options <- function() {
       help = "Path to left joined data",
       metavar = "character",
       type = "character"
+    ),
+    optparse::make_option(
+      c("-b", "--initial_date"),
+      default = "2022-1",
+      help = "Initial date",
+      metavar = "character",
+      type = "character"
+    ),
+    optparse::make_option(
+      c("-f", "--final_date"),
+      default = "2023-5",
+      help = "Final date",
+      metavar = "character",
+      type = "character"
     )
   )
   opt_parser <- optparse::OptionParser(option_list = listaOpciones)
