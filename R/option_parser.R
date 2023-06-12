@@ -31,13 +31,8 @@ get_options <- function() {
       metavar = "character",
       type = "character"
     ),
-    optparse::make_option(
-      c("-y", "--year"),
-      default = 2030,
-      help = "",
-      metavar = "integer",
-      type = "integer"
-    ),
+    integer_option(c("-y", "--year"), default = 2030),
+    integer_option(c("--initial-population"), default = 516),
     optparse::make_option(
       c("-s", "--scenarios"),
       default = "base,predation,management,fledglings,predation_and_management",
@@ -86,9 +81,26 @@ get_options <- function() {
       help = "Final date",
       metavar = "character",
       type = "character"
+    ),
+    optparse::make_option(
+      c("--interval"),
+      default = "2000-2023",
+      help = "Year interval",
+      metavar = "character",
+      type = "character"
     )
   )
   opt_parser <- optparse::OptionParser(option_list = listaOpciones)
   opciones <- optparse::parse_args(opt_parser)
   return(opciones)
+}
+
+integer_option <- function(name = c("-y", "--year"), default = 2030) {
+  optparse::make_option(
+    name,
+    default = default,
+    help = "",
+    metavar = "integer",
+    type = "integer"
+  )
 }
