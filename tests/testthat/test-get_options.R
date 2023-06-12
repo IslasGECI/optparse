@@ -17,13 +17,23 @@ describe("get_options()", {
     expected <- 2030
     expect_equal(obtained, expected)
   })
-  it("can be used in SRC scripts", {
-    src_file <- "/workdir/tests/helpers/cli_option_parser_interval.R"
-    expected_month <- "2017-2037"
-    command <- glue::glue("Rscript {src_file} --interval-time {expected_month}")
-    output <- system(command, intern = TRUE)
-    expected <- stringr::str_detect(output, "First year is 2017 and the last year is 2037")
+  it("returns a default interval", {
+    obtained <- get_options()[["interval"]]
+    expected <- "2000-2023"
     expect_equal(obtained, expected)
+  })
+  it("returns a default initial population", {
+    obtained <- get_options()[["initial-population"]]
+    expected <- 516
+    expect_equal(obtained, expected)
+  })
+  it("return interval", {
+    src_file <- "/workdir/tests/helpers/cli_option_parser_interval.R"
+    expected_interval <- "2017-2037"
+    command <- glue::glue("Rscript {src_file} --interval {expected_interval}")
+    output <- system(command, intern = TRUE)
+    expected <- stringr::str_detect(output, "2017-2037")
+    expect_true(expected)
   })
   it("returns a default scenarios", {
     obtained <- get_options()[["scenarios"]]
