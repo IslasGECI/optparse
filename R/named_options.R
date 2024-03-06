@@ -1,3 +1,4 @@
+#' @export
 get_options_from_names <- function(names) {
   listaOpciones <- make_lista_opciones(names)
   opt_parser <- optparse::OptionParser(option_list = listaOpciones)
