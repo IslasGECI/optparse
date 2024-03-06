@@ -22,11 +22,11 @@ opcion_output <- optparse::make_option(
 )
 
 opcion_data_path <- optparse::make_option(
-      c("-d", "--data_path"),
-      default = "reports/tables/tosh_population_time_series.csv",
-      help = "",
-      metavar = "character",
-      type = "character"
+  c("-d", "--data_path"),
+  default = "reports/tables/tosh_population_time_series.csv",
+  help = "",
+  metavar = "character",
+  type = "character"
 )
 
 OPTIONS <- list(
