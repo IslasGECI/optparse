@@ -72,4 +72,9 @@ describe("get_options()", {
     expected <- "2023-5"
     expect_equal(obtained, expected)
   })
+  it("return data path", {
+    obtained <- get_options()[["data_path"]]
+    expected <- "reports/tables/tosh_population_time_series.csv"
+    expect_equal(obtained, expected)
+  })
 })

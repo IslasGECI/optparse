@@ -1,29 +1,29 @@
 library(optparse)
 
+character_option <- function(name, default, help) {
+  optparse::make_option(
+    name,
+    default = default,
+    help = help,
+    metavar = "character",
+    type = "character"
+  )
+}
+
 #' @export
 get_options <- function() {
   listaOpciones <- list(
-    optparse::make_option(
+    character_option(
       c("-m", "--month"),
       default = "2022-7",
-      help = "",
-      metavar = "character",
-      type = "character"
+      help = ""
     ),
-    optparse::make_option(
+    character_option(
       c("-p", "--predictions_path"),
       default = "reports/non-tabular/summary_predictions.json",
-      help = "",
-      metavar = "character",
-      type = "character"
+      help = ""
     ),
-    optparse::make_option(
-      c("-d", "--data_path"),
-      default = "reports/tables/tosh_population_time_series.csv",
-      help = "",
-      metavar = "character",
-      type = "character"
-    ),
+    opcion_data_path,
     optparse::make_option(
       c("-o", "--output_path"),
       default = "reports/figures/yearly_time_serie_individuals_all_scenario.jpg",
