@@ -1,15 +1,5 @@
 library(optparse)
 
-character_option <- function(name, default, help) {
-  optparse::make_option(
-    name,
-    default = default,
-    help = help,
-    metavar = "character",
-    type = "character"
-  )
-}
-
 #' @export
 get_options <- function() {
   listaOpciones <- list(
@@ -24,12 +14,10 @@ get_options <- function() {
       help = ""
     ),
     opcion_data_path,
-    optparse::make_option(
+    character_option(
       c("-o", "--output_path"),
       default = "reports/figures/yearly_time_serie_individuals_all_scenario.jpg",
-      help = "",
-      metavar = "character",
-      type = "character"
+      help = ""
     ),
     integer_option(c("-y", "--year"), default = 2030),
     integer_option(c("--initial-population"), default = 516),
