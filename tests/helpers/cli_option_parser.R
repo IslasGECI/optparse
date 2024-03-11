@@ -1,3 +1,3 @@
-source("/workdir/R/option_parser.R")
+library(geci.optparse)
 month <- get_options()[["month"]]
 print(month)
