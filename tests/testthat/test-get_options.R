@@ -4,6 +4,21 @@ describe("get_options()", {
     expected <- "2022-7"
     expect_equal(obtained, expected)
   })
+  it("Use in Makefile", {
+    name_options <- 'c(\"data_path\", \"output\", \"b-number\")'
+    expected_data_path <- "results.csv"
+    expected_output_path <- "output.csv"
+    expected_b_number <- "10"
+    command <- glue::glue("Rscript -e 'geci.optparse::get_options_from_names({name_options})' --data_path {expected_data_path} --output_path {expected_output_path} --b-number {expected_b_number}")
+    output <- system(command, intern = TRUE)
+    expected <- stringr::str_detect(output[2], expected_data_path)
+    expect_true(expected)
+    expected <- stringr::str_detect(output[5], expected_output_path)
+    expect_true(expected)
+    expected <- stringr::str_detect(output[8], expected_b_number)
+    expect_true(expected)
+  })
+
   it("can be used in SRC scripts", {
     src_file <- "/workdir/tests/helpers/cli_option_parser.R"
     expected_month <- "2022-9"
