@@ -17,10 +17,8 @@ describe("get_options()", {
     command <- glue::glue("Rscript -e 'geci.optparse::get_options_from_names({name_options})' --data_path {expected_data_path} --output_path {expected_output_path} --b-number {expected_b_number}")
     output <- system(command, intern = TRUE)
     option_value_is_rigth(output[2], expected_data_path)
-    expected <- stringr::str_detect(output[5], expected_output_path)
-    expect_true(expected)
-    expected <- stringr::str_detect(output[8], expected_b_number)
-    expect_true(expected)
+    option_value_is_rigth(output[5], expected_output_path)
+    option_value_is_rigth(output[8], expected_b_number)
   })
   it("can be used in SRC scripts", {
     src_file <- "/workdir/tests/helpers/cli_option_parser.R"
