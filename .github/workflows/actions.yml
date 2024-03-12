@@ -7,7 +7,7 @@ jobs:
     - name: Copia repositorio
       uses: actions/checkout@v2
     - name: Construye imagen
-      run: docker build --tag islasgeci/optparse .
+      run: docker build --tag islasgeci/optparse:latest --tag islasgeci/optparse:${GITHUB_SHA:0:4} .
     - name: Verifica el formato
       run: docker run islasgeci/optparse make check
     - name: Corre pruebas y evalúa cobertura
