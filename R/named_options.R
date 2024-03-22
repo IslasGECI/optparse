@@ -21,6 +21,7 @@ opcion_output <- optparse::make_option(
   type = "character"
 )
 
+#' @export
 character_option <- function(name, default, help) {
   optparse::make_option(
     name,
