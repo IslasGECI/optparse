@@ -37,10 +37,17 @@ opcion_data_path <- character_option(
   help = ""
 )
 
+opcion_recorder_name <- character_option(
+  c("-r", "--recorder-name"),
+  default = "Socorro5",
+  help = ""
+)
+
 OPTIONS <- list(
   "b-number" = opcion_b_number,
   "data_path" = opcion_data_path,
-  "output" = opcion_output
+  "output" = opcion_output,
+  "recorder-name" = opcion_recorder_name
 )
 
 make_lista_opciones <- function(names) {
