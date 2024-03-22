@@ -5,4 +5,10 @@ describe("All options", {
     expected_default <- "Socorro5"
     expect_equal(obtained_default, expected_default)
   })
+  it("has option 'memo'", {
+    new_option <- character_option(c("-m", "--memo"), default = "Guillermo", help = "Nombre del analista")
+    obtained_default <- get_options_from_vec(c(new_option))[["memo"]]
+    expected_default <- "Guillermo"
+    expect_equal(obtained_default, expected_default)
+  })
 })
