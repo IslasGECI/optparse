@@ -12,4 +12,10 @@ describe("All options", {
     expected_default <- "Guillermo"
     expect_equal(obtained_default, expected_default)
   })
+  it("has options 'memo' and 'nepo'", {
+    vec_options <- c(memo_option, nepo_option)
+    obtained_default <- get_options_from_vec(vec_options)[["memo"]]
+    expected_default <- "Guillermo"
+    expect_equal(obtained_default, expected_default)
+  })
 })
