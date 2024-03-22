@@ -52,6 +52,6 @@ OPTIONS <- list(
 
 make_lista_opciones <- function(names) {
   n_names <- length(names)
-  lista_opciones <- comprehenr::to_list(for (i in 1:n_names) OPTIONS[[names[i]]])
+  lista_opciones <- comprehenr::to_vec(for (i in 1:n_names) OPTIONS[[names[i]]])
   return(lista_opciones)
 }
