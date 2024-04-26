@@ -1,6 +1,7 @@
 describe("All options", {
   memo_option <- character_option(c("-m", "--memo"), default = "Guillermo", help = "Nombre del analista")
   nepo_option <- character_option(c("-n", "--nepo"), default = "Nepo", help = "Nombre del analista")
+  pi_option <- double_option(c("-p", "--pi"), default = 3.1416, help = "Cuál valor de pi usaremos")
   it("has option 'recorder-name'", {
     name_option <- "recorder-name"
     obtained_default <- get_options_from_names(name_option)[[name_option]]
@@ -22,5 +23,12 @@ describe("All options", {
     obtained_nepo_default <- obtained[["nepo"]]
     expected_nepo_default <- "Nepo"
     expect_equal(obtained_nepo_default, expected_nepo_default)
+  })
+  it("has options 'pi'", {
+    vec_options <- c(pi_option)
+    obtained <- get_options_from_vec(vec_options)
+    obtained_pi_default <- obtained[["pi"]]
+    expected_pi_default <- 3.1416
+    expect_equal(obtained_pi_default, expected_pi_default)
   })
 })
