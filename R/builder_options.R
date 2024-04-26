@@ -1,3 +1,4 @@
+#' @export
 double_option <- function(name, default, help) {
   optparse::make_option(
     name,
@@ -8,6 +9,7 @@ double_option <- function(name, default, help) {
   )
 }
 
+#' @export
 integer_option <- function(name = c("-y", "--year"), default = 2030) {
   optparse::make_option(
     name,
