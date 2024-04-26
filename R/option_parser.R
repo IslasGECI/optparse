@@ -82,13 +82,3 @@ get_options <- function() {
   opciones <- optparse::parse_args(opt_parser)
   return(opciones)
 }
-
-integer_option <- function(name = c("-y", "--year"), default = 2030) {
-  optparse::make_option(
-    name,
-    default = default,
-    help = "",
-    metavar = "integer",
-    type = "integer"
-  )
-}

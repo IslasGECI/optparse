@@ -21,16 +21,6 @@ opcion_output <- optparse::make_option(
   type = "character"
 )
 
-#' @export
-character_option <- function(name, default, help) {
-  optparse::make_option(
-    name,
-    default = default,
-    help = help,
-    metavar = "character",
-    type = "character"
-  )
-}
 
 opcion_data_path <- character_option(
   c("-d", "--data_path"),
