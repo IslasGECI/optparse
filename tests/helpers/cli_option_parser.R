@@ -1,3 +1,3 @@
-library(geci.optparse)
+library(gecioptparse)
 month <- get_options()[["month"]]
 print(month)

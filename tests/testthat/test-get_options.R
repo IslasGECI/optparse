@@ -14,7 +14,7 @@ describe("get_options()", {
     expected_data_path <- "results.csv"
     expected_output_path <- "output.csv"
     expected_b_number <- "10"
-    command <- glue::glue("Rscript -e 'geci.optparse::get_options_from_names({name_options})' --data_path {expected_data_path} --output_path {expected_output_path} --b-number {expected_b_number}")
+    command <- glue::glue("Rscript -e 'gecioptparse::get_options_from_names({name_options})' --data_path {expected_data_path} --output_path {expected_output_path} --b-number {expected_b_number}")
     output <- system(command, intern = TRUE)
     option_value_is_rigth(output[2], expected_data_path)
     option_value_is_rigth(output[5], expected_output_path)

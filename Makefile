@@ -44,8 +44,8 @@ setup: clean install
 install:
 	R -e "devtools::document()" && \
     R CMD build . && \
-    R CMD check geci.optparse_0.2.0.tar.gz && \
-    R CMD INSTALL geci.optparse_0.2.0.tar.gz
+    R CMD check gecioptparse_0.2.0.tar.gz && \
+    R CMD INSTALL gecioptparse_0.2.0.tar.gz
 
 tests:
 	Rscript -e "devtools::test(stop_on_failure = TRUE)"

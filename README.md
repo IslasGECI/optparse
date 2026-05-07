@@ -12,7 +12,7 @@ parameter](https://github.com/IslasGECI//optparse/actions/workflows/actions.yml/
 
 ## Step to use
 ``` R
-	Rscript -e "seabird::plot_yearly_time_serie(geci.optparse::get_options())" \
+	Rscript -e "seabird::plot_yearly_time_serie(gecioptparse::get_options())" \
 		--scenarios management \
 		--output_path reports/figures/yearly_time_serie_individuals_scenario_management.jpg \
 		--year 2030

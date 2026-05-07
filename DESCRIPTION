@@ -1,4 +1,4 @@
-Package: geci.optparse
+Package: gecioptparse
 Title: Parser for command line options
 Authors@R: c(
     person(given = "Ciencia de Datos",
