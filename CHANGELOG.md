@@ -28,6 +28,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Make function `character_option()` public
 
-[unreleased]: https://github.com/IslasGECI/optparse/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/IslasGECI/optparse/releases/tag/v0.2.0
-[0.1.0]: https://github.com/IslasGECI/optparse/releases/tag/v0.1.0
+[unreleased]: https://github.com/IslasGECI/gecioptparse/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/IslasGECI/gecioptparse/releases/tag/v0.2.0
+[0.1.0]: https://github.com/IslasGECI/gecioptparse/releases/tag/v0.1.0
